@@ -25,14 +25,13 @@
         <%= f.label :description %><br>
         <%= f.text_area :description, class: "form-control", rows: 5 %>
       </div>
-      <div class="field">
-        <%= f.hidden_field :completed, :value => false, class: "form-control" %>
-      </div>
         <div class="">
             <%= f.label :difficulty %>
-          <%= f.select :difficulty, options_for_select(1..5) %>
+            <%= f.select :difficulty, options_for_select(1..5) %>
             <%= f.label :due_date, style: "padding-left: 40px" %>
             <%= f.date_select :due_date%>
+            <%= f.label :completed, style: "padding-left: 40px" %>
+            <%= f.check_box :completed, class: "check-box" %>
         </div>
       <div style="padding-top: 15px">
       <%= f.submit class: "btn btn-primary btn-lg" %>

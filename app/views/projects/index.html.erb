@@ -7,9 +7,12 @@
       <%= link_to(project) do %>
         <h3 class="list-group-item-heading">
           <strong><%= project.title %></strong> 
+          <% if project.completed? %>
+          - COMPLETED
+          <% end %>
         </h3>
       <% end %>
-         <h5 class="list-group-item-text"><%= project.description %> <br><br></h4>   
+         <h5 class="list-group-item-text"><%= project.description %> <br><br></h5>   
           Difficulty: <%= project.difficulty %>
     </div>
     <div style="padding-left: 50px">
