@@ -1,0 +1,7 @@
+<h1>Editing Task</h1>
+
+<%= render 'form' %>
+<div class="col-lg-8">
+<%= link_to 'Show Task', project_task_path, class: "btn btn-default"  %>
+<%= link_to 'Back To Project', project_path(@task.project_id), class: "btn btn-default"  %>
+</div>

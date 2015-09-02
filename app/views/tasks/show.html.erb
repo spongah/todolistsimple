@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<div class="col-lg-offset-2 col-lg-8 jumbotron">
+	 <p>
+	  <strong>Title:</strong>
+	  <%= @task.title %>
+	</p>
+
+	<p>
+	  <strong>Description:</strong>
+	  <%= @task.description %>
+	</p>
+
+	<p>
+	  <strong>Difficulty:</strong>
+	  <%= @task.project.difficulty %>
+	</p>
+
+	<p>
+	  <strong>Due Date:</strong>
+	  <%= @task.project.due_date %>
+	</p>
+
+	<p>
+	  <strong>Completed:</strong>
+	  <%= @task.completed %>
+	</p>
+
+	<p>
+	  <strong>Project:</strong>
+	  <%= @task.project.title %>
+	</p>
+</div>
+	 <%= link_to 'Edit Task', edit_project_task_path, class: "btn btn-primary" %>
+	 <%= link_to 'Back To Project', project_path(@task.project_id), class: "btn btn-default" %>
+
+

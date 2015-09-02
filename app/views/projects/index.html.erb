@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All Projects</h1><br>
+<div class="list-group">
+  <% @projects.order(:difficulty).each do |project| %>
+    <div class="list-group-item">
+      <%= link_to(project) do %>
+        <h3 class="list-group-item-heading">
+          <strong><%= project.title %></strong> 
+        </h3>
+      <% end %>
+         <h5 class="list-group-item-text"><%= project.description %> <br><br></h4>   
+          Difficulty: <%= project.difficulty %>
+    </div>
+    <div style="padding-left: 50px">
+      <div style="padding-top: 10px">
+        <%= link_to 'Show Project', project %> | 
+        <%= link_to 'Edit Project', edit_project_path(project) %> | 
+        <%= link_to 'Delete Project', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>   
+    </div><br>
+   <% end %>
+</div>
+
+<div style="padding-top: 50px">
+  <div align="center">
+    <%= link_to 'New Project', new_project_path, :class => "btn btn-primary btn-lg" %>
+  </div>
+</div>
+
+
+
